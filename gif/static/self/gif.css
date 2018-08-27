@@ -1,0 +1,67 @@
+#content
+{
+    margin: auto 10px;
+    margin-top:60px;
+    background: white;
+    border-radius: 5px;
+}
+#ads_content
+{
+    margin: auto auto;
+    margin-top:60px;
+    background: white;
+    border-radius: 5px;
+}
+body
+{
+    background: #E2E2E2;
+}
+.border_test
+{
+    border: solid white 1px;
+}
+
+._content_internal
+{
+    margin: 5px 5px;
+}
+#gif, #ads_vote
+{
+    background: #EEEEEE;
+    text-align:center;
+}
+.add_radis{
+    border-radius: 5px;
+}
+#img
+{
+    border-radius:20px;
+    margin: 5px 5px;
+}
+.btn
+{
+    margin: 0 10px;
+}
+#like
+{
+    background: #E93844;
+    border: solid #E93844 1px;
+    border-radius: 9px;
+
+
+}
+#archive, #do_comment, #copyright
+{
+    background: #C8C8C8;
+    border: solid #C8C8C8 1px;
+    border-radius: 9px;
+    margin: 0 10px;
+}
+#btn_item
+{
+    color: white;
+}
+#_content, _ads
+{
+margin: 10px auto;
+}
