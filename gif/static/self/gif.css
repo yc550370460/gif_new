@@ -30,6 +30,20 @@ body
     background: #EEEEEE;
     text-align:center;
 }
+#info_content
+{
+    background: #EEEEEE;
+    text-align:left;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+#tags_content
+{
+    background: #EEEEEE;
+    text-align:left;
+    padding: 1px auto;
+    width:50%;
+}
 .add_radis{
     border-radius: 5px;
 }
@@ -54,7 +68,15 @@ body
 {
     background: #C8C8C8;
     border: solid #C8C8C8 1px;
-    border-radius: 9px;
+    border-radius: 7px;
+    margin: 0 10px;
+}
+#refer
+{
+    background: #F9F9F9;
+    color: black;
+    border: solid #F9F9F9 1px;
+    border-radius: 3px;
     margin: 0 10px;
 }
 #btn_item
@@ -64,4 +86,21 @@ body
 #_content, _ads
 {
 margin: 10px auto;
+}
+.tags_details
+{
+    background: #F6E5C1;
+    border: solid #F6E5C1 1px;
+    text-align: center;
+    margin: 3px 3px;
+    padding: 2px 10px;
+}
+
+li{
+    display: inline-block;
+    padding-right: 0px;
+}
+ul{
+    margin: 5px -5px;
+
 }
