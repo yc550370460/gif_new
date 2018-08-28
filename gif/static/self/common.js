@@ -49,10 +49,25 @@
 		{
 			$(".dock").css("top", ($(window).height() - $(".dock").height()) / 2);
 		});
+		$("#archive").click(function(){
+            AddFavorite('Gif','http://www.baidu.com')
+        })
 	});
 
 
-
+    function AddFavorite(title,url){
+    try{
+       window.external.addFavorite(url,title);
+     }
+    catch(e){
+     try{
+        window.sidebar.addPanel(title,url,"");
+      }
+     catch(e){
+       alert("Sorry, your web browser not support.\n\nPlease use Ctrl+D.");
+       }
+     }
+    }
 
 	window.showMenuLine = function (index)
 	{
@@ -71,4 +86,7 @@
 
 
 
+
+
 })(jQuery);
+
