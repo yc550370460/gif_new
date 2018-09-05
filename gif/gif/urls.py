@@ -9,5 +9,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/', index),
-    url(r'^gif/', gif),
+    url(r'^gif/\d+', gif),
+    url(r'^admin/', include(admin.site.urls)),
 ]

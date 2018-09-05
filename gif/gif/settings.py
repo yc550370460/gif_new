@@ -111,3 +111,5 @@ STATIC_ROOT = (
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'gif/gif_app/templates'),)
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
+
+IMAGE_BASIC_PATH = "/Users/yangchun/private_project/gif/src/"

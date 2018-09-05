@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gif Fun</title>
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../static/self/gif.css">
@@ -13,42 +14,61 @@
 <body>
     <div class="container">
         <div class="row">
-            <div id="content" class="border_test col-md-7">
+            <div id="content" class="col-xs-7 col-sm-7 col-md-7">
                 <div id="_content">
                     <div id="vote" class="_content_internal">
                         <button type="button" class="btn btn-primary" id="like"><span class="glyphicon glyphicon-heart-empty"></span></button>
                         <button type="button" class="btn btn-primary" id="archive"><span class="glyphicon glyphicon-star archive_item"></span></button>
                     </div>
                     <div id="gif" class="_content_internal add_radis">
-                        <img src="../static/img/1.gif" alt="" id="img">
+                        <img src={{image_path}} alt="" id="img">
                     </div>
-                    <div id="comment_btn" class="_content_internal">
-                        <button type="button" class="btn btn-primary" id="do_comment"><span class="glyphicon glyphicon-comment btn_item"></span> comment</button>
+                    <div id="comment_btn" class="copy_right_class">
                         <button type="button" class="btn btn-primary" id="copyright"><span class="glyphicon glyphicon-copyright-mark btn_item"></span> copyright</button>
                     </div>
                 </div>
                 <div id="info">
-                    <div id="info_content" class="_content_internal add_radis">
-                        <div id="refer_link" class="_content_internal add_radis"><span class="glyphicon glyphicon-globe btn_item"></span> From bbs.hupu.com</div>
+                    <div id="info_content" class="source_class add_radis">
+                        <div id="refer_link" class="_content_internal add_radis"><span class="glyphicon glyphicon-globe"></span> From bbs.hupu.com</div>
                     </div>
                 </div>
                 <div id="tags">
-                    <div id="tags_content" class="_content_internal add_radis">
+                    <div id="tags_content" class="_content_internal add_radis border_test">
                         <ul>
-                            <li><div class="tags_details add_radis">1123123123232345</div></li>
-                            <li><div class="tags_details add_radis">123</div></li>
-                            <li><div class="tags_details add_radis">123</div></li>
-                            <li><div class="tags_details add_radis">123</div></li>
-                            <li><div class="tags_details add_radis">123</div></li>
-                            <li><div class="tags_details add_radis">1123123123232345</div></li>
-                            <li><div class="tags_details add_radis">123</div></li>
-                            <li><div class="tags_details add_radis">11231231345</div></li>
+                            <li class="tags_details add_radis border_test">1234561111</li>
+                            <li class="tags_details add_radis border_test">1234561111</li>
+                            <li class="tags_details add_radis border_test">1234561111</li>
+                            <li class="tags_details add_radis border_test">1234561111</li>
+                            <li class="tags_details add_radis border_test">1234561111</li>
                         </ul>
+                    </div>
+                </div>
+                <div id="ad_bottom border_test">
+                    <div id="ad_bottom_content" class="_content_internal add_radis">
+                            ad_bottom
+                    </div>
+                </div>
+                <div id="paging">
+                    <div id="paging_content" class="_content_internal add_radis">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                            <div class="col-xs-4 col-sm-4 col-md-4" style="width:30% float:left">
+                                <button type="button" class="btn btn-primary" id="paging_before_btn">
+                                    <span class="glyphicon glyphicon-arrow-left btn_paging_item"></span>
+                                </button>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 pull-right" style="width:30% float:left">
+                                <button type="button" class="btn btn-primary" id="paging_after_btn">
+                                    <span class="glyphicon glyphicon-arrow-right btn_paging_item"></span>
+                                </button>
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <div id="ads_content" class="border_test col-md-3">
+            <div id="ads_content" class="col-xs-3 col-sm-3 col-md-3">
                 <div id="_ads">
                     <div id="ads_vote" class="_content_internal">
                         ads
@@ -58,9 +78,21 @@
         </div>
     </div>
     <script>
+        $("#paging_after_btn").click(function(){
+            var url = window.location.href;
+            var page = url.split("/")
+            current_page = page[page.length-1]
+            current_page = Number(current_page) + 1
+            location.href = "/gif/"+current_page;
+        });
 
-
+        $("#paging_before_btn").click(function(){
+            var url = window.location.href;
+            var page = url.split("/")
+            current_page = page[page.length-1]
+            current_page = Number(current_page) - 1
+            location.href = "/gif/"+current_page;
+        });
     </script>
 </body>
-
 </html>
