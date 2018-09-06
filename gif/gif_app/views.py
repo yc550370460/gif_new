@@ -4,6 +4,7 @@ from gif_app.models import Image
 from django.conf import settings
 import os
 import json
+import random
 
 # Create your views here.
 
@@ -19,14 +20,14 @@ def gif(request):
         page_number = int(page)
     else:
         page_number = 1
-    print page_number
     all_object = Image.objects.all()
-    print [item for item in all_object.order_by("weight")]
     image_object = all_object.order_by("weight")[page_number:page_number+1]
     if image_object.exists():
         path = image_object[0].path
     else:
-        path = Image.objects.filter(id=page_number)[0].path
+        id_list = all_object.values("id")
+        tmp_number = random.randint(0, len(id_list) - 1)
+        path = all_object.order_by("weight")[tmp_number:tmp_number+1][0].path
 
     return render(request, "index.html", {'image_path': path})
 
