@@ -134,3 +134,29 @@ img{
      max-width: 400px;
      vertical-align:middle;
  }
+ .img_list
+ {
+     width: 170px;
+     height: 150px;
+     padding:5px 5px;
+     margin: auto 1px;
+ }
+.img_ul{
+    margin: 10px 5%
+
+}
+.img_content
+{
+    width:90%;
+    margin: auto auto;
+    background: white;
+}
+.img_list_div
+{
+    width:100%;
+    background: #cccccc
+}
+.img_list_li
+{
+    margin: 5px auto;
+}

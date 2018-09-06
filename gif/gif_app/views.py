@@ -31,5 +31,6 @@ def gif(request):
 
     return render(request, "index.html", {'image_path': path})
 
-def upload(request):
-    pass
+
+def manage(request):
+    return render(request, "manage.html")

@@ -40,14 +40,14 @@ ul, ol {
 }
 #header {
     padding-bottom:5px;
-    background:#707070;
+    background:#cccccc;
     width:100%;
     text-align:center;
 }
 #footer{
     margin: -5px auto;
     padding-bottom:5px;
-    background:#707070;
+    background:#cccccc;
     width:100%;
     text-align:center;
     margin-top: -60px;
@@ -114,11 +114,11 @@ ul, ol {
 
 }
 #header .menu ul li a:hover, #header .menu ul li.active a {
-    color: #00dfb9;
+    color: black;
     text-decoration: none;
 }
 #header .menu ul li a {
-    color: #ccc; font-size:16px;
+    color: grey; font-size:16px;
     letter-spacing: 2px;
     cursor: pointer;text-decoration:none;
 }
@@ -372,4 +372,19 @@ border-radius:2px}
 {
     position: absolute;
     margin:0 auto;
+}
+#content_div
+{
+    width: 70%;
+    margin: 20px auto;
+}
+.border_test
+{
+    border: solid red 1px;
+
+}
+#image_content, #upload_content
+{
+    width: 90%;
+    margin: auto auto;
 }
