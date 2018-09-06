@@ -136,9 +136,10 @@ img{
  }
  .img_list
  {
-     width: 170px;
+
      height: 150px;
-     padding:5px 5px;
+     width: auto;
+     padding:5px 1px;
      margin: auto 1px;
  }
 .img_ul{
