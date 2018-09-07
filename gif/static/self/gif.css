@@ -154,7 +154,7 @@ img{
 }
 .img_list_div
 {
-    width:100%;
+    width:auto;
     background: #cccccc
 }
 .img_list_li
