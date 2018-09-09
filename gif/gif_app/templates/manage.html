@@ -165,6 +165,7 @@
                             "hideMethod":"fadeOut"//消失时的动画方式
                             };
                             toastr.success("Upload success");
+                            console.log(JSON.parse(responseStr).description)
                             }
                         else {
                             toastr.options= {
@@ -180,11 +181,12 @@
                             "showMethod":"fadeIn",//显示时的动画方式
                             "hideMethod":"fadeOut"//消失时的动画方式
                             };
-                        toastr.error("Upload failed");
+                        toastr.error("Upload failed, "+ JSON.parse(responseStr).description);
+                        console.log(JSON.parse(responseStr).description)
                         }
                     },
                     error: function (responseStr) {
-                        alert(responseStr)
+                        console.log(JSON.parse(responseStr).description)
                         toastr.options= {
                             "closeButton":false,//显示关闭按钮
                             "debug":false,//启用debug
@@ -198,7 +200,7 @@
                             "showMethod":"fadeIn",//显示时的动画方式
                             "hideMethod":"fadeOut"//消失时的动画方式
                             };
-                        toastr.error("Upload failed");
+                        toastr.error("Upload failed, "+ JSON.parse(responseStr).description);
                     }
                 })
             }
