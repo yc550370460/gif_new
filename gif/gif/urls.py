@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from gif_app.views import index, gif, manage
+from gif_app.views import index, gif, manage, upload
 
 urlpatterns = [
     # Examples:
@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^index/', index),
     url(r'^gif/\d+', gif),
     url(r'^manage/', manage),
+    url(r'^upload/', upload),
 ]

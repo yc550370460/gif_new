@@ -1,7 +1,10 @@
+{% load staticfiles %}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>...</title>
+    <link rel="stylesheet" type="text/css" href="../static/toastr/toastr.css">
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../static/gifplayer/gifplayer.css">
     <link rel="stylesheet" type="text/css" href="../static/self/common.css">
@@ -10,7 +13,9 @@
     <script type="text/javascript" src="../static/jquery-easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../static/self/common.js"></script>
     <script type="text/javascript" src="../static/gifplayer/jquery.gifplayer.js"></script>
+    <script type="text/javascript" src="../static/toastr/toastr.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../static/self/gif.css">
+
     <style>
 
     </style>
@@ -80,12 +85,125 @@
                 </li>
             </ul>
         </div>
-        <div id="upload_content" class="row"></div>
+        <div id="upload_content" class="row add_radis upload_content">
+            <div class="upload_content_div row">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="col-md-3" style="margin: 10px 10px;">
+                        <b>Upload imgs</b>
+                    </div>
+                    <div class="col-md-3" style="margin: 10px 10px;">
+                        <input type="file" id="upload_file">
+                    </div>
+                    <div class="col-md-2" style="margin: 10px 10px;">
+                        <button type="button" id="upload">Upload</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
     <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        });
         <!--$('.gifs').each(function(){-->
         <!--$(this).gifplayer();-->
         <!--});-->
+        $("#upload").click(function()
+            {
+                var formData = new FormData();
+                var name = $("#upload_file").val();
+                formData.append("file", $("#upload_file")[0].files[0]);
+                formData.append("name", name);
+
+                $.ajax({
+                    headers:{"X-CSRFToken": csrftoken},
+                    url: "/upload/",
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function () {
+                        console.log("Uploading");
+                    },
+                    success: function (responseStr) {
+                        if (JSON.parse(responseStr).status === 0) {
+                            toastr.options= {
+                            "closeButton":false,//显示关闭按钮
+                            "debug":false,//启用debug
+                            "positionClass":"toast-top-right",//弹出的位置
+                            "showDuration":"200",//显示的时间
+                            "hideDuration":"1000",//消失的时间
+                            "timeOut":"5000",//停留的时间
+                            "extendedTimeOut":"1000",//控制时间
+                            "showEasing":"swing",//显示时的动画缓冲方式
+                            "hideEasing":"linear",//消失时的动画缓冲方式
+                            "showMethod":"fadeIn",//显示时的动画方式
+                            "hideMethod":"fadeOut"//消失时的动画方式
+                            };
+                            toastr.success("Upload success");
+                            }
+                        else {
+                            toastr.options= {
+                            "closeButton":false,//显示关闭按钮
+                            "debug":false,//启用debug
+                            "positionClass":"toast-top-right",//弹出的位置
+                            "showDuration":"200",//显示的时间
+                            "hideDuration":"1000",//消失的时间
+                            "timeOut":"5000",//停留的时间
+                            "extendedTimeOut":"1000",//控制时间
+                            "showEasing":"swing",//显示时的动画缓冲方式
+                            "hideEasing":"linear",//消失时的动画缓冲方式
+                            "showMethod":"fadeIn",//显示时的动画方式
+                            "hideMethod":"fadeOut"//消失时的动画方式
+                            };
+                        toastr.error("Upload failed");
+                        }
+                    },
+                    error: function (responseStr) {
+                        alert(responseStr)
+                        toastr.options= {
+                            "closeButton":false,//显示关闭按钮
+                            "debug":false,//启用debug
+                            "positionClass":"toast-top-right",//弹出的位置
+                            "showDuration":"200",//显示的时间
+                            "hideDuration":"1000",//消失的时间
+                            "timeOut":"5000",//停留的时间
+                            "extendedTimeOut":"1000",//控制时间
+                            "showEasing":"swing",//显示时的动画缓冲方式
+                            "hideEasing":"linear",//消失时的动画缓冲方式
+                            "showMethod":"fadeIn",//显示时的动画方式
+                            "hideMethod":"fadeOut"//消失时的动画方式
+                            };
+                        toastr.error("Upload failed");
+                    }
+                })
+            }
+        );
+
     </script>
 </body>
 </html>
