@@ -37,52 +37,7 @@
     </div>
     <div id="content_div" class="">
         <div class="img_content add_radis">
-            <ul class="img_ul">
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/0.gif" class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/0.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/1.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/2.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/1.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/0.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/0.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/0.gif"  class="img_list gifs">
-                    </div>
-                </li>
-                <li class="img_list_li">
-                    <div class="img_list_div">
-                        <img src="../static/img/2.gif"  class="img_list gifs">
-                    </div>
-                </li>
+            <ul class="img_ul" id="img_list_ul">
             </ul>
         </div>
         <div id="upload_content" class="row add_radis upload_content">
@@ -104,6 +59,18 @@
         </div>
     </div>
     <script>
+        var tmp = {{ manage | safe}};
+        for (var i=0;i<tmp.length;i++)
+        {
+            var img_string = "<img src=\"" + tmp[i]+ "\" class=\"img_list gifs\">";
+            var img_div_string = "<div class=\"img_list_div\"></div>";
+            var img_li_string = "<li class=\"img_list_li\"></li>";
+            img_li_object = $(img_li_string).appendTo("#img_list_ul");
+            img_div_object = $(img_div_string).appendTo(img_li_object);
+            $(img_string).appendTo(img_div_object);
+
+        }
+
         function getCookie(name) {
             var cookieValue = null;
             if (document.cookie && document.cookie != '') {
@@ -129,6 +96,7 @@
                 xhr.setRequestHeader("X-CSRFToken", csrftoken);
             }
         });
+
         <!--$('.gifs').each(function(){-->
         <!--$(this).gifplayer();-->
         <!--});-->

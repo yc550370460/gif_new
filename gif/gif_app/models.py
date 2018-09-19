@@ -13,6 +13,7 @@ class Image(models.Model):
     path = models.ImageField(upload_to="gif/static/img/")
     name = models.CharField(max_length=100)
     weight = models.IntegerField(default=1)
+    date = models.DateField(blank=True, null=True)
 
     def __unicode__(self):
         return self.name

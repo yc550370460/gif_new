@@ -4,7 +4,7 @@ from gif_app.models import Image
 from django.conf import settings
 import os
 import json
-import random
+import datetime
 
 # Create your views here.
 
@@ -34,7 +34,9 @@ def gif(request):
 
 
 def manage(request):
-    return render(request, "manage.html")
+    manage_show = Image.objects.all().order_by("date")[1:9].values("path")
+    manage_show = [item["path"] for item in manage_show if manage_show]
+    return render(request, "manage.html", {"manage": json.dumps(manage_show)})
 
 
 def upload(request):
@@ -47,9 +49,11 @@ def upload(request):
         with open(store_file_name,"wb+") as f:
             for chunk in file["file"].chunks():
                 f.write(chunk)
+        date_upload = datetime.datetime.now()
         new_obj = Image.objects.create(status="OK", active=True, path="../static/img/" + request.FILES["file"].name,
-                                       name=request.FILES["file"].name, weight=0)
+                                       name=request.FILES["file"].name, weight=0, date=date_upload)
         new_obj.save()
         return HttpResponse(json.dumps({"status": 0, "description": "Upload successfully"}))
     except Exception, e:
+        print e
         return HttpResponse(json.dumps({"status": -1, "description": "inner error"}))

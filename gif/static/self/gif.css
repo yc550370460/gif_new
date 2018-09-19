@@ -23,7 +23,7 @@ body
 
 ._content_internal
 {
-    margin: 5px 5px;
+    margin: 5px 0px;
 }
 .copy_right_class
 {
@@ -40,7 +40,7 @@ body
     background: #EEEEEE;
     text-align:center;
 }
-#info_content, #paging_content, #ad_bottom_content
+#info_content, #paging_content_left, #ad_bottom_content, #paging_content_right
 {
     background: #EEEEEE;
     text-align:left;
@@ -60,11 +60,12 @@ body
 }
 #img
 {
-    border-radius:20px;
-    margin: 5px 5px;
-    height: 400px;
-    width: auto;
-    max-width: 620px;
+    border-radius:10px;
+    margin: 4px -4px;
+    padding: 0px 10px;
+    height: auto;
+    /*width: auto;*/
+    max-width: 100%;
 }
 .btn
 {
@@ -118,12 +119,12 @@ ul{
 }
 #paging_before_btn, #paging_after_btn
 {
-    background: #EEEEEE;
-    border: solid #EEEEEE 1px;
-    border-radius: 7px;
+    /*background: #EEEEEE;*/
+    border: solid 1px;
     margin: auto auto;
     height: 30%;
-    width: 40%;
+    width: 30%;
+    min-width: 40px;
 }
 .btn_paging_item
 {

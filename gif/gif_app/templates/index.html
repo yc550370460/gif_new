@@ -6,10 +6,12 @@
     <title>Gif Fun</title>
     <link rel="stylesheet" type="text/css" href="../static/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../static/self/gif.css">
+    <link rel="stylesheet" type="text/css" href="../static/movie/normalize.css">
     <script type="text/javascript" src="../static/jquery-easyui/jquery.min.js"></script>
     <script type="text/javascript" src="../static/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="../static/jquery-easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../static/self/common.js"></script>
+    <script type="text/javascript" src="../static/movie/ripplet.js"></script>
 </head>
 <body>
     <div class="container">
@@ -48,21 +50,18 @@
                             ad_bottom
                     </div>
                 </div>
-                <div id="paging">
-                    <div id="paging_content" class="_content_internal add_radis">
-                        <div class="row">
-                            <div class="col-xs-2 col-sm-2 col-md-2"></div>
-                            <div class="col-xs-4 col-sm-4 col-md-4" style="width:30%; float:left">
-                                <button type="button" class="btn btn-primary" id="paging_before_btn">
-                                    <span class="glyphicon glyphicon-arrow-left btn_paging_item"></span>
-                                </button>
-                            </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 pull-right" style="width:30%; float:left">
-                                <button type="button" class="btn btn-primary" id="paging_after_btn">
-                                    <span class="glyphicon glyphicon-arrow-right btn_paging_item"></span>
-                                </button>
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                <div class="row">
+                    <div id="paging" style="text-align: center">
+                        <div class="col-xs-1 col-sm-1 col-md-1"></div>
+                        <div id="" class="_content_internal add_radis col-xs-4 col-sm-4 col-md-4">
+                            <button data-ripplet="color: rgba( 64, 192, 255, .2); spreading-duration: 2s; clearing-delay: 1.8s;" id="paging_before_btn">
+                                <span class="glyphicon glyphicon-arrow-left btn_paging_item"></span>
+                            </button>
+                        </div>
+                        <div id="" class="_content_internal add_radis col-xs-4 col-sm-4 col-md-4">
+                            <button data-ripplet id="paging_after_btn">
+                                <span class="glyphicon glyphicon-arrow-right btn_paging_item"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -93,6 +92,14 @@
             current_page = Number(current_page) - 1
             location.href = "/gif/"+current_page;
         });
+        $("#img").click(function(){
+            var url = window.location.href;
+            var page = url.split("/")
+            current_page = page[page.length-1]
+            current_page = Number(current_page) + 1
+            location.href = "/gif/"+current_page;
+        });
+
     </script>
 </body>
 </html>
