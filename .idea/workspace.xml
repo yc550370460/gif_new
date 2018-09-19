@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="470d8f3f-e847-450a-8707-b68c6e6b0eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gif/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/gif/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/gif_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gif/gif_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/gif_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gif/gif_app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gif/gif_app/templates/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/gif/gif_app/templates/manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/gif_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gif/gif_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/cat1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/img_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/png/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/shaseng.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/tangseng.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/west_jouney.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/img/wyf.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gif/static/self/gif.css" beforeDir="false" afterPath="$PROJECT_DIR$/gif/static/self/gif.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,16 +60,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gif/gif_app/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="64" column="81" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
+            <state relative-caret-position="120">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gif/gif_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
@@ -129,8 +110,8 @@
       <find>_content_internal</find>
       <find>paging_before_btn</find>
       <find>parse</find>
-      <find>inner</find>
       <find>JSON</find>
+      <find>inner</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Administrator\Desktop\private_project\gif\gif_new\gif\static\self</dir>
@@ -151,8 +132,8 @@
         <option value="$PROJECT_DIR$/gif/static/self/gif.css" />
         <option value="$PROJECT_DIR$/gif/gif_app/templates/index.html" />
         <option value="$PROJECT_DIR$/gif/gif_app/models.py" />
-        <option value="$PROJECT_DIR$/gif/gif_app/templates/manage.html" />
         <option value="$PROJECT_DIR$/gif/gif_app/views.py" />
+        <option value="$PROJECT_DIR$/gif/gif_app/templates/manage.html" />
       </list>
     </option>
   </component>
@@ -167,9 +148,9 @@
       <path value="$PROJECT_DIR$/gif/static/sidr/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="54" />
-    <option name="y" value="208" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="67" />
+    <option name="y" value="81" />
     <option name="width" value="1427" />
     <option name="height" value="820" />
   </component>
@@ -258,9 +239,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="208" width="1427" height="820" extended-state="1" />
+    <frame x="67" y="81" width="1427" height="820" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32845646" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32845646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -273,7 +255,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.35568514" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.35568514" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -424,13 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gif/gif_app/templates/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="64" column="81" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gif/gif_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -438,6 +413,13 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gif/gif_app/templates/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
         </state>
       </provider>
     </entry>
